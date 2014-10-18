@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Adela::Application.routes.draw do
   localized do
     devise_for :users
@@ -50,4 +52,6 @@ Adela::Application.routes.draw do
     post "/stop_acting", to: 'base#stop_acting_as', as: 'stop_acting'
     post "/create_users", to: 'base#create_users', as: "create_users"
   end
+
+  mount Sidekiq::Web => '/sidekiq'
 end

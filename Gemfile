@@ -20,11 +20,15 @@ gem 'rabl'
 gem 'pg'
 gem 'eco'
 gem 'redis'
-gem 'sidekiq'
 gem 'figaro'
 gem 'will_paginate', '~> 3.0'
 gem 'rack-pjax'
 gem 'route_translator'
+
+# Sinatra and slim for sidekiq web UI
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
 
 group :development, :test do
   gem 'spring'

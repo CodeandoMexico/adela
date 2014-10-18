@@ -2,11 +2,8 @@ worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout Integer(ENV["REQUEST_TIMEOUT"] || 15)
 preload_app true
 
-@worker = nil
-
 before_fork do |server, worker|
 
-  @worker ||= spawn("bundle exec rake jobs:work")
   @sidekiq_pid ||= spawn("bundle exec sidekiq -c 2")
 
   Signal.trap 'TERM' do
