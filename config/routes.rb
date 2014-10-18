@@ -51,7 +51,7 @@ Adela::Application.routes.draw do
     get "/acting/:user_id", to: 'base#acting_as', as: 'acting_as'
     post "/stop_acting", to: 'base#stop_acting_as', as: 'stop_acting'
     post "/create_users", to: 'base#create_users', as: "create_users"
+    mount Sidekiq::Web => '/sidekiq'
   end
 
-  mount Sidekiq::Web => '/sidekiq'
 end
