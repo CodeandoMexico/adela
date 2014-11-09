@@ -5,9 +5,12 @@ class Admin::BaseController < ApplicationController
   before_action :check_admin_session unless Rails.env.test?
 
   def create_users
+    puts "Crear usuarios"
     uploader = UsersUploader.new
     uploader.store!(file_params)
+    puts "archivo cargado"
     create_users_from_file(uploader.read)
+    puts "Usuarios creados desde archivo"
     if @users.any?
       redirect_to admin_root_path, :notice => "Los usuarios se crearon exitosamente."
     else
@@ -56,13 +59,18 @@ class Admin::BaseController < ApplicationController
 
   def create_users_from_file(file_content)
     @users = []
+    puts "parseando contenido del csv"
     CSV.new(file_content.force_encoding('UTF-8'), :headers => :first_row).each do |row|
       organization = Organization.where(:title => row["organizacion"]).first_or_create
+      puts "consultando organizacion #{row["organizacion"]}"
       password = Devise.friendly_token.first(8)
+      puts "generando password #{password}"
       user = User.new(name: row["nombre"], email: row["email"], password: password, password_confirmation: password, organization_id: organization.id)
+      puts "obteniendo usuario #{row["nombre"]} #{row["email"]}"
       if user.save
         @users << user
         UserAccountWorker.perform_async(user.id, password)
+        puts "creando usuario"
       end
     end
   end
