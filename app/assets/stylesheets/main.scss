@@ -1,0 +1,65 @@
+@import "variables";
+
+$azul-codeando:#283858;
+$azul-obscuro-codeando:#151f31;
+
+.hero {
+  background: url(/cmx-home.jpg);
+  padding: 60px 0;
+}
+
+/* ========================================================================
+   The main nav bar that contains the site logo, nav links, and search
+   ======================================================================== */
+.navbar-inner .container {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    height: 60px;
+}
+
+.navbar .brand {
+  background-color: $azul-obscuro-codeando;
+  padding: 18px 83px;
+  max-width: 164px;
+}
+
+.navbar-inner {
+  border: none;
+  background: $azul-codeando;
+    padding-left: 0px !important;
+}
+
+.navbar {
+  margin: 0px;
+  font-weight: 200;
+  font-size: 15px;
+  border: none;
+  * {
+    box-sizing: unset;
+  }
+}
+
+.navbar .nav {
+  margin-bottom: 17px;
+  float: none;
+  color: white;
+}
+
+.logo img {
+  width: 10em;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+.nav-actions {
+  padding: 0px 20px !important;
+}
+
+.nav li a:hover {
+  background-color: transparent;
+  color: white;
+}

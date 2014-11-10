@@ -1,32 +1,29 @@
-<header id="header">
-  <div id="logo" class="col-md-3">
-    <h1 id="logo-base"><%= link_to "", root_path %></h1>
-    <div id="tagline">
-      <span>Abrir para</span>
-      <div class="tagline-mask">
-        <ul>
-          <li>innovar</li>
-          <li>emprender</li>
-          <li>transparentar</li>
-          <li>participar</li>
-          <li>ahorrar</li>
-          <li>evaluar</li>
-          <li>eficientar</li>
-        </ul>
-      </div>
+<div class="navbar">
+  <div class="navbar-inner col-md-12">
+    <div class="logo brand col-md-9">
+<!-- Be sure to leave the brand out there if you want it shown -->
+      <a href="/"><img src="http://paginas.datamx.io/images/base/cmx-logo.png" alt="Datamx.io" title="Datamx.io"></a>
     </div>
-  </div>
-  <div class="nav-actions col-md-3 pull-right">
-    <ul class="nav navbar-nav navbar-right">
+    <div class="nav-actions col-md-3 pull-right">
+      <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
         <li><%= link_to "Mi organización", organization_path(current_organization) %></li>
         <li><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete %></li>
       <% else %>
         <li><%= link_to "Iniciar sesión", new_user_session_path %></li>
       <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
-</header>
+</div>
+<!--header id="header">
+  <div id="logo" class="col-md-3">
+    <h1 id="logo-base"><%= link_to "", root_path %></h1>
+    <div id="tagline">
+      <span>Abrir para</span>
+    </div>
+  </div>
+</header-->
 <% if session[:from_admin]%>
   <div class="alert alert-danger">
     <span class="danger"></span>
@@ -34,3 +31,4 @@
     <%= link_to "Volver al administrador", admin_stop_acting_path, :method => :post, :class => "pull-right" %>
   </div>
 <% end %>
+
