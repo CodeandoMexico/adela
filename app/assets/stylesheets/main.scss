@@ -21,13 +21,14 @@ $azul-obscuro-codeando:#151f31;
 .navbar .brand {
   background-color: $azul-obscuro-codeando;
   padding: 18px 83px;
-  max-width: 164px;
+  max-width: 340px;
 }
 
 .navbar-inner {
   border: none;
   background: $azul-codeando;
-    padding-left: 0px !important;
+  padding-left: 0px !important;
+  width: 100%;
 }
 
 .navbar {
@@ -37,6 +38,10 @@ $azul-obscuro-codeando:#151f31;
   border: none;
   * {
     box-sizing: unset;
+  }
+
+  div {
+    display: inline-block;
   }
 }
 
