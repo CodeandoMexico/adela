@@ -64,7 +64,9 @@ $azul-obscuro-codeando:#151f31;
   padding: 0px 20px !important;
 }
 
-.nav li a:hover {
-  background-color: transparent;
-  color: white;
+.nav li {
+  a:hover, a:active {
+    background-color: transparent;
+    color: white;
+  }
 }
