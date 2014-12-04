@@ -32,8 +32,9 @@ $azul-obscuro-codeando:#151f31;
 
 .navbar .brand {
   background-color: $azul-obscuro-codeando;
-  padding: 18px 83px;
-  max-width: 340px;
+  padding: 14px 83px;
+  max-width: 360px;
+  height: 73px;
 }
 
 .navbar-inner {
@@ -81,4 +82,9 @@ $azul-obscuro-codeando:#151f31;
     background-color: transparent;
     color: white;
   }
+}
+
+// Change font color
+.activity-logs .text {
+  color: #202F4C;
 }
