@@ -8,12 +8,18 @@ $azul-obscuro-codeando:#151f31;
   padding: 60px 0;
 }
 
-.app-description {
-  background-image: url(http://datamx.io/bg.jpg);
-  background-position-x: -50px;
-  background-position-y: -100px;
+.container {
+  margin-top: 40px;
 }
 
+
+.navbar-nav > li > a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #FFF;
+    padding-top: 25px;
+    padding-bottom: 11px;
+}
 /* ========================================================================
    The main nav bar that contains the site logo, nav links, and search
    ======================================================================== */
@@ -58,7 +64,7 @@ $azul-obscuro-codeando:#151f31;
 }
 
 .logo img {
-  width: 10em;
+  width: 13em;
 }
 
 .clearfix {
