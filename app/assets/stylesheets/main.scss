@@ -93,3 +93,23 @@ $azul-obscuro-codeando:#151f31;
 body {
   font-family:  'Helvetica Neue',Helvetica,Arial,sans-serif
 }
+
+// Change color buttons
+
+.btn.button {
+  background-color: transparent;
+
+  color: #25255B;
+
+  border-color: #25255B;
+  border-width: 2px;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover{
+    background-color: #25255B;
+    color: #FFF;
+  }
+}
