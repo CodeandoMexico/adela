@@ -6,7 +6,7 @@ preload_app true
 
 before_fork do |server, worker|
 
-  @worker ||= spawn("bundle exec rake jobs:work")
+  # @worker ||= spawn("bundle exec rake jobs:work")
   @sidekiq_pid ||= spawn("bundle exec sidekiq -c 2")
 
   Signal.trap 'TERM' do

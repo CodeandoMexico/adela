@@ -1,27 +1,3 @@
-.header {
-  background-color: $black;
-  height: 120px;
-}
-
-.logo {
-  background: image-url("adela-logo.png") left no-repeat;
-  min-width: 280px;
-  min-height: 50px;
-  padding: 26px 15px 0 60px;
-}
-
-a.logo-text {
-  color: $white;
-  font-size: 16px;
-  &:hover {
-    color: $white;
-  }
-}
-
-.nav li a:hover {
-  background-color: $black;
-}
-
 .nav-actions {
   padding: 30px 20px;
 }
@@ -166,7 +142,6 @@ a.logo-text {
 }
 
 // Organization Dashboard
-
 .org-header {
   padding-right: 0;
 }

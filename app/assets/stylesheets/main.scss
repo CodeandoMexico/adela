@@ -1,0 +1,121 @@
+@import "variables";
+
+$azul-codeando:#283858;
+$azul-obscuro-codeando:#151f31;
+
+.hero {
+  background: url(/cmx-home.jpg);
+  padding: 60px 0;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+
+.navbar-nav > li > a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #FFF;
+    padding-top: 25px;
+    padding-bottom: 11px;
+}
+/* ========================================================================
+   The main nav bar that contains the site logo, nav links, and search
+   ======================================================================== */
+.navbar-inner .container {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    height: 60px;
+}
+
+.navbar .brand {
+  background-color: $azul-obscuro-codeando;
+  padding: 14px 83px;
+  max-width: 360px;
+  height: 73px;
+}
+
+.navbar-inner {
+  border: none;
+  background: $azul-codeando;
+  padding-left: 0px !important;
+  width: 100%;
+}
+
+.navbar {
+  margin: 0px;
+  font-weight: 200;
+  font-size: 15px;
+  border: none;
+  * {
+    box-sizing: unset;
+  }
+
+  div {
+    display: inline-block;
+  }
+}
+
+.navbar .nav {
+  margin-bottom: 17px;
+  float: none;
+  color: white;
+}
+
+.logo img {
+  width: 13em;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+.nav-actions {
+  padding: 0px 20px !important;
+}
+
+.nav li {
+  a:hover, a:active {
+    background-color: transparent;
+    color: white;
+  }
+}
+
+// Change font
+.activity-logs .text {
+  color: #202F4C;
+}
+
+
+body {
+  font-family:  'Helvetica Neue',Helvetica,Arial,sans-serif
+}
+
+// Change color buttons
+
+.btn.button {
+  background-color: transparent;
+
+  color: #25255B;
+
+  border-color: #25255B;
+  border-width: 2px;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover{
+    background-color: #25255B;
+    color: #FFF;
+  }
+}
+
+// login
+
+.user-form-heading {
+  color: #2C416B
+}
