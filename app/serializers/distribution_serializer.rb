@@ -1,5 +1,15 @@
 class DistributionSerializer < ActiveModel::Serializer
-  attributes :spatial, :temporal, :accrualPeriodicity, :title, :description, :mediaType, :downloadURL, :license
+  attributes  :title,
+              :description,
+              :license,
+              :downloadURL,
+              :mediaType,
+              :format,
+              :byteSize,
+              # These are dcat:Dataset fields we're adding to dcat:Distribution
+              :temporal,
+              :spatial,
+              :accrualPeriodicity
 
   def license
     "http://datos.gob.mx/libreusomx/"

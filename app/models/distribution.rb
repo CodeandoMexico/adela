@@ -1,5 +1,5 @@
 class Distribution
-  attr_accessor :title, :description, :downloadURL, :mediaType, :byteSize, :temporal, :spatial, :accrualPeriodicity
+  attr_accessor :title, :description, :downloadURL, :mediaType, :format, :byteSize, :temporal, :spatial, :accrualPeriodicity
 
   def initialize(attributes = {})
     attributes.each do |name, value|

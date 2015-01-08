@@ -46,11 +46,13 @@ feature "data catalog management" do
 
     dcat_keys = %w{ title description homepage issued modified language license dataset }
     dcat_dataset_keys = %w{ title description modified contactPoint identifier accessLevel accessLevelComment spatial language publisher keyword distribution }
+    dcat_distribution_keys = %w{ title description license downloadURL mediaType format byteSize temporal spatial accrualPeriodicity }
 
     get "/hacienda/catalogo.json"
     json_response = JSON.parse(response.body)
     json_response.keys.should eq(dcat_keys)
     json_response["dataset"].last.keys.should eq(dcat_dataset_keys)
+    json_response["dataset"].last["distribution"].last.keys.should eq(dcat_distribution_keys)
 
     # Makes damn sure that no foreign attributes are set in the model
     # See: https://github.com/mxabierto/adela/issues/106
