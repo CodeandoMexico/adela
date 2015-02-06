@@ -50,4 +50,21 @@ class Organization < ActiveRecord::Base
       self.all
     end
   end
+
+  def after_save(record)
+    org_created = CKAN::Organization.create_if_not_exists(record.title)
+    puts "Status organization #{org_created}"
+    if org_created and CKAN::Harvest.find_by(title: record.title, ENV["CKAN_API_KEY"])
+      organization = created.name
+      job_created = CKAN::Harvest.create_job(
+          urlfor(controller: "organizations", action: "catalogs"),
+          record.title,
+          "dcat_json",
+          ENV["CKAN_API_KEY"],
+          owner_org: organization,
+          frequency: 'DAILY'
+      )
+      puts "Status harvest job #{job_created}"
+    end
+  end
 end

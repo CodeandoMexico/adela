@@ -26,6 +26,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'rack-pjax'
 gem 'route_translator'
 
+gem 'ckan', :git => 'https://github.com/zoek1/CKAN.git'
+
 group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
