@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.1.2'
 
 gem 'rails', '4.1'
 
@@ -26,13 +26,13 @@ gem 'will_paginate', '~> 3.0'
 gem 'rack-pjax'
 gem 'route_translator'
 
-gem 'ckan', :git => 'https://github.com/zoek1/CKAN.git'
+gem 'ckan', :git => 'https://github.com/codeandomexico/CKAN-rb.git', :branch => 'harvest'
 
 group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
-  gem 'debugger'
+#  gem 'debugger'
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'thin'
